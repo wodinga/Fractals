@@ -74,7 +74,8 @@ class Tree: NSView {
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-        self.backgroundColor.setFill()
+//        treeView.layer?.backgroundColor
+//        treeView.backgroundColor.setFill()
         self.drawBranch(x1: Float(self.frame.size.width/5), y1: 100.0, angle: 90.0, depth: 10)
         dirtyRect.fill()
 
@@ -110,6 +111,7 @@ class Tree: NSView {
         path.move(to: fromPoint)
         path.addLine(to: toPoint)
 
+        shapeLayer.add(anim, forKey: "lines")
         shapeLayer.strokeColor = self.leafColor.cgColor
         if (lineWidth < 5){
             shapeLayer.strokeColor = self.leafColor.cgColor

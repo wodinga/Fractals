@@ -10,6 +10,7 @@ import Cocoa
 
 class TreeViewController: NSViewController {
 
+    @IBOutlet weak var treeView: Tree!
     override func viewDidLoad() {
         super.viewDidLoad()
 
