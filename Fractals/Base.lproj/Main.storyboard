@@ -720,7 +720,7 @@
                                     <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fu7-kR-fJT">
                                         <rect key="frame" x="657" y="488" width="162" height="19"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                        <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="mtv-L7-Pe8"/>
+                                        <sliderCell key="cell" state="on" alignment="left" maxValue="30" doubleValue="10" tickMarkPosition="above" sliderType="linear" id="mtv-L7-Pe8"/>
                                         <connections>
                                             <action selector="changeDepthWithSender:" target="WGr-TJ-slv" id="p37-Tm-eQu"/>
                                         </connections>

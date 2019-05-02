@@ -9,7 +9,7 @@
 import Cocoa
 // This code shamelessly copies from this blog post as a starting point: http://www.knowstack.com/swift-fractal-tree/
 
-@IBDesignable
+//@IBDesignable
 class Tree: NSView {
 
     let PI = 3.14156
@@ -39,7 +39,6 @@ class Tree: NSView {
     
     override func prepareForInterfaceBuilder() {
         trunkColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        
     }
 
     @IBAction func changeDepth(sender:AnyObject){
@@ -76,7 +75,7 @@ class Tree: NSView {
         super.draw(dirtyRect)
 //        treeView.layer?.backgroundColor
 //        treeView.backgroundColor.setFill()
-        self.drawBranch(x1: Float(self.frame.size.width/5), y1: 100.0, angle: 90.0, depth: 10)
+        self.drawBranch(x1: Float(self.frame.size.width/5), y1: 20.0, angle: 60.0, depth: treeDepth)
         dirtyRect.fill()
 
     }
@@ -106,7 +105,7 @@ class Tree: NSView {
         let anim = CABasicAnimation(keyPath:"strokeEnd")
         anim.fromValue = 0.0
         anim.toValue = 1.0
-        anim.duration = 2
+        anim.duration = 5
 
         path.move(to: fromPoint)
         path.addLine(to: toPoint)
