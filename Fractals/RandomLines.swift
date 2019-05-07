@@ -30,6 +30,7 @@ class RandomLines: NSView {
     required init?(coder decoder: NSCoder) {
         range = (0...num)
         super.init(coder: decoder)
+        wantsLayer = true
     }
     
     func random() -> CGFloat{
@@ -42,15 +43,19 @@ class RandomLines: NSView {
             } as! [CGPoint]
     }
     
+    override func awakeFromNib() {
+        drawLines()
+    }
+    
     func drawLines(){
         coord = randPoints()
         var path = CGMutablePath()
         path.addLines(between: coord!)
         
         
-        var layer = CAShapeLayer()
-        layer.fillRule = .nonZero
-        layer.path = path
+        var shapeLayer = CAShapeLayer()
+        shapeLayer.fillRule = .nonZero
+        shapeLayer.path = path
         let color = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
         
         stars = coord!.map{ (point:CGPoint) in
@@ -59,7 +64,7 @@ class RandomLines: NSView {
             let starLayer = CAShapeLayer()
             starLayer.frame = rect
             starLayer.path = star
-            layer.addSublayer(starLayer)
+            shapeLayer.addSublayer(starLayer)
             return starLayer
         }
         
@@ -73,7 +78,7 @@ class RandomLines: NSView {
         anim.repeatCount = .greatestFiniteMagnitude
         anim.duration = 120.0
         
-        layer.add(anim, forKey: "pathAnimation")
+        shapeLayer.add(anim, forKey: "pathAnimation")
         
         
         //: Change Stroke Color
@@ -85,7 +90,7 @@ class RandomLines: NSView {
         strokeColor.duration = 5
         strokeColor.autoreverses = true
         strokeColor.repeatCount = .greatestFiniteMagnitude
-        layer.add(strokeColor, forKey: "strokeColorAnimation")
+        shapeLayer.add(strokeColor, forKey: "strokeColorAnimation")
         
         
         //: Color Changing Animation
@@ -98,18 +103,13 @@ class RandomLines: NSView {
         
         //layer.add(colorChange, forKey: "colorAnimation")
         
-        layer.fillColor = fillColor
+        shapeLayer.fillColor = fillColor
         
         //layer.backgroundColor = color.cgColor
-        layer.strokeColor = color.cgColor
+        shapeLayer.strokeColor = color.cgColor
         
-        let view = NSView(frame: CGRect(x: 0, y: 0, width: size, height: size))
+        layer?.addSublayer(shapeLayer)
         
-        view.wantsLayer = true
-        view.layer?.frame = view.frame
-        assert(view.layer != nil)
-        view.layer!.addSublayer(layer)
-        
-        view.layer?.backgroundColor = fillColor
+        layer?.backgroundColor = fillColor
     }
 }
