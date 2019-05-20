@@ -705,14 +705,14 @@
         <scene sceneID="BrT-LX-Ze8">
             <objects>
                 <viewController id="N0x-QO-2W3" sceneMemberID="viewController">
-                    <view key="view" id="oTY-9t-rqO" customClass="RandomLines" customModule="Fractals" customModuleProvider="target">
+                    <view key="view" id="oTY-9t-rqO" customClass="Mandelbrot" customModule="Fractals" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="747" height="521"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </view>
                 </viewController>
                 <customObject id="EQ1-6h-LGe" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1367.5" y="591.5"/>
+            <point key="canvasLocation" x="1331" y="1445"/>
         </scene>
         <!--Tree View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -783,7 +783,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1131" y="1407"/>
+            <point key="canvasLocation" x="237" y="1322"/>
         </scene>
     </scenes>
 </document>

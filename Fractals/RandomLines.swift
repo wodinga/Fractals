@@ -34,7 +34,7 @@ class RandomLines: NSView {
     }
     
     func random() -> CGFloat{
-        return CGFloat.random(in: 0...CGFloat(size), using: &g)
+        return CGFloat.random(in: 0...CGFloat(frame.size.width), using: &g)
     }
     
     func randPoints() -> [CGPoint]{
