@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		102F0E2122820BA600C5CB55 /* Mandelbrot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102F0E2022820BA600C5CB55 /* Mandelbrot.swift */; };
+		10534D342281DD93008A0EA1 /* RandomLinesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10534D332281DD93008A0EA1 /* RandomLinesTest.swift */; };
 		10D31E232281B82B00591CEB /* RandomLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D31E222281B82B00591CEB /* RandomLines.swift */; };
 		F9541DB6226CD1950049E5C1 /* TreeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9541DB5226CD1950049E5C1 /* TreeView.xib */; };
 		F96F92C42259A9BB009E1512 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96F92C32259A9BB009E1512 /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		102F0E2022820BA600C5CB55 /* Mandelbrot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mandelbrot.swift; sourceTree = "<group>"; };
+		10534D332281DD93008A0EA1 /* RandomLinesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomLinesTest.swift; sourceTree = "<group>"; };
 		10D31E222281B82B00591CEB /* RandomLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RandomLines.swift; path = Fractals/RandomLines.swift; sourceTree = "<group>"; };
 		F9541DB5226CD1950049E5C1 /* TreeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TreeView.xib; sourceTree = "<group>"; };
 		F96F92C02259A9BB009E1512 /* Fractals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fractals.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +105,7 @@
 			children = (
 				F96F92D62259A9BD009E1512 /* FractalsTests.swift */,
 				F96F92D82259A9BD009E1512 /* Info.plist */,
+				10534D332281DD93008A0EA1 /* RandomLinesTest.swift */,
 			);
 			path = FractalsTests;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10534D342281DD93008A0EA1 /* RandomLinesTest.swift in Sources */,
 				F96F92D72259A9BD009E1512 /* FractalsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

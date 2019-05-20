@@ -33,6 +33,12 @@ class RandomLines: NSView {
         wantsLayer = true
     }
     
+    override init(frame frameRect: NSRect) {
+        range = (0...num)
+        super.init(frame: frameRect)
+        wantsLayer = true
+    }
+    
     func random() -> CGFloat{
         return CGFloat.random(in: 0...CGFloat(frame.size.width), using: &g)
     }
